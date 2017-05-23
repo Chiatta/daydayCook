@@ -1,0 +1,600 @@
+/**************************通用样式*******************************/
+*{
+    margin:0;
+    padding:0;
+    color: #000;
+    font-size: 12px;
+    list-style:none;
+    text-decoration:none;
+    box-sizing:border-box;
+    font-family:'GothamThin', "HeitiSC-Light", "Microsoft Yahei", Simhei, sans-serif;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+/*图标引用*/
+
+@font-face {
+      font-family: 'search';
+      src: url('./font/search.eot?92288620');
+      src: url('./font/search.eot?92288620#iefix') format('embedded-opentype'),
+           url('./font/search.woff?92288620') format('woff'),
+           url('./font/search.ttf?92288620') format('truetype'),
+           url('./font/search.svg?92288620#search') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "search";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+/*************************************************************************/
+
+.nav_div{
+    padding:7px 3.4%;
+    height:65px;
+    border-bottom:1px solid #eee;
+    background-color: #000;
+}
+.searchBox{
+    width: 332px;
+    height:40px;
+    background-color: #2d2d2d;
+    border-radius:24px;
+    border:1px solid #2d2d2d;
+    color:#4a4a4a;
+    position:absolute;
+    top:13px;
+    left:34%;
+}
+.searchBox input[type=text]{
+    font-size: 14px;
+    background-color: transparent;
+    padding-left : 5px;
+    padding-right: 45px;
+    border:0px;
+    outline: 0 !important;
+    color:#fff;
+}
+.searchBox label{
+    position: absolute;
+    padding-left: 20px;
+    left:0;
+    top:-4px;
+    height:48px;
+    line-height:48px;
+    text-align: left;
+    color:#4a4a4a;
+    font-weight: normal;
+}
+.icon-search{
+  width: 21px;
+  height: 19px;
+  position: absolute;
+  background: url("../img/searchBtn_black.png");
+  top:18px;
+  right: 0;
+}
+.searchBox button{
+    width: 60px;
+    height:48px;
+    background-color: transparent;
+    position: absolute;
+    top:-4px;
+    right: -93px;
+    cursor: pointer;
+    color:#4a4a4a;
+    font-size: 20px;
+    outline: 0 !important;
+    border: 0;
+    font-weight: normal;
+}
+
+#login{
+    position: absolute;
+    top:26px;
+    right:3.4%;
+    color:#fff;
+}
+#login p span{
+  color:#fff;
+}
+#login i{
+  color:#fff;
+}
+#loginDDL{
+    border:1px solid #E1E1E1;
+    position: absolute;
+    top:35px;
+    left:-35px;
+    display: none;
+    z-index: 100;
+}
+#login li>a{
+    color: #000;
+    display: inline-block;
+    width:108px ;
+    height:40px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+.icon-up-dir{
+    position: absolute;
+    top:28px;
+    left:11px;
+    z-index: 100;
+    display: none;
+}
+.icon-user{
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/*detail*/
+#detail{
+  margin-bottom: 30px;
+}
+#detail_videoInfo{
+  margin-top: -1px;
+  position: relative;
+  width:100%;
+  background-color: #000;
+}
+.center{
+    width:1180px;
+    max-width: 100%;
+    margin:0 auto;
+}
+@media screen and (max-width:1200px)
+.center{
+    padding: 0 2%;
+}
+#detail_video{
+  position: static;
+  width: 70%;
+  z-index: 100;
+  cursor: pointer;
+  float: left;
+}
+
+.detail_video_padding{
+  position: relative;
+  background-color: #2d2d2d;
+  min-height: 495px;
+  padding:20px 0 50px 20px;
+}
+.playBtn{
+  width:40px;
+  position:absolute;
+  top:43%;
+  left:34%;
+}
+/*#detail_looked{
+  font-size: 16px;
+  color: #fff;
+  float: left;
+  display: inline-block;
+}*/
+#detail_video_suggestion{
+  width: 28%;
+  padding-bottom: 20px;
+  height: 458px;
+  overflow-y:scroll;
+  float: right;
+}
+.tip{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.tip p{
+  color: #e1e1e1;
+  font-size: 16px;
+  display: inline-block;
+}
+.tip .rank{
+  cursor: pointer;
+  font-size: 12px;
+}
+a{
+  color:#fff;
+}
+.detail_videoInfo .list{
+  margin: 10px 0;
+  border:1px solid transparent;
+  cursor: pointer;
+}
+.list_img{
+  vertical-align: top;
+  width: 30%;
+  margin-right: 3%;
+  float: left;
+}
+.list_img img{
+  width: 100%;
+}
+.list_info{
+  vertical-align: top;
+  width: 94%;
+  font-size: 14px;
+  color: #fff;
+}
+.list_info .title{
+  line-height: 30px;
+  color: #e1e1e1;
+  font-size: 14px;
+  text-align: left;
+}
+.list_info p,.list_info .title{
+  text-overflow:ellipsis;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+}
+.list_info p,.list_info i{
+  color: #616161;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/*foodInfo*/
+.detail_foodInfo{
+  margin-top:50px;
+  padding-right: 330px;
+}
+.detail_foodInfo_name{
+  margin-bottom: 40px;
+}
+.detail_foodInfo_name .title{
+  font-size: 24px;
+  color:#000;
+}
+.detail_foodInfo_name .time,.detail_foodInfo_name .look,.detail_foodInfo_name .look i{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  margin-top:5px;
+  color: #a5a4a4;
+}
+.detail_foodInfo_name .look{
+  margin-left: 20px;
+}
+.detail_foodInfo_name .des{
+  color: #616161;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+.detail_foodInfo_name .useTime{
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.detail_foodInfo_name .icon-clock{
+  font-size: 18px;
+}
+.detail_food_material{
+  margin-bottom: 40px;
+}
+.detail_food_material .title{
+  margin-bottom: 10px;
+}
+.detail_food_material .title span{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  font-size: 18px;
+  color: #000;
+}
+.detail_food_material .title i{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  font-size: 18px;
+  color: #000;
+}
+.detail_food_material table{
+  width: 100%;
+  color: #616161;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+.detail_food_material table td{
+  width: 50%;
+  text-align: center;
+  padding:9px 0; 
+  font-size: 14px;
+  font-weight: 300;
+}
+.detail_food_material table tr:nth-child(even){
+  background-color: #fcfcfc;
+}
+.detail_food_steps{
+  margin-bottom: 40px;
+}
+.detail_food_steps .title{
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.detail_food_steps .title span{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 18px;
+}
+.detail_food_steps .title i{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 18px;
+}
+.stepList .list{
+  margin-bottom: 30px;
+  background-color: #fcfcfc;
+}
+.stepList .img{
+  width: 50%;
+  vertical-align: top;
+}
+.stepList .img img{
+  width: 100%;
+  border:1px solid #ececec;
+  border-right: 0;
+}
+.stepList .info{
+  width: 50%;
+  padding-left: 30px;
+  padding-top: 20px;
+  vertical-align: top;
+}
+.stepList .box{
+  display: inline-block;
+  vertical-align: middle;
+}
+.stepList p{
+  font-size: 14px;
+  color: #000;
+  margin-top: 20px;
+  padding-right: 10px;
+}
+
+.detail_foodComment .title{
+  margin-bottom: 5px;
+}
+.detail_foodComment .title span{
+  display: inline-block;
+  vertical-align: middle;
+  color: #000;
+  font-size: 18px;
+}
+.detail_foodComment .title i{
+  display: inline-block;
+  vertical-align: middle;
+  color: #000;
+  font-size: 18px;
+}
+.detail_foodComment .talkBox textarea{
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 150px;
+  padding-left: 5px;
+  padding-top: 7px;
+  border-radius: 3px;
+  max-width: 100%;
+  max-height: 200px;
+  border:1px solid #e1e1e1;
+}
+.detail_foodComment .talkSubmit{
+  border: 1px solid #e1e1e1;
+  border-top:1px solid transparent;
+  margin-top: -6px;
+  padding:10px;
+}
+.detail_foodComment .talkSubmit img{
+  width: 25px;
+}
+.detail_foodComment .commit{
+  font-size: 14px;
+  color: #fff;
+  background-color: #fcae01;
+  border-radius: 2px;
+  padding:4px 12px;
+  margin-right: 6px;
+}
+.detail_foodComment button{
+  outline: none;
+  border:0;
+}
+
+/*评论列表*/
+.detail_foodComment .commentList{
+  position: relative;
+  margin:20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.detail_foodComment .commentList .img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.detail_foodComment .commentList .img img{
+  width: 100%;
+}
+.detail_foodComment .commentList .info p{
+  color: #616161;
+}
+.detail_foodComment .commentList .name{
+  margin-bottom: 10px;
+}
+.detail_foodComment .commentList .info{
+  color: #616161;
+  margin-bottom: 2px;
+  position: relative;
+  padding-right: 120px;
+}
+.detail_foodComment .commentList .info .time{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+  color: #616161;
+}
+
+
+
+
+
+/*footer*/
+#footer{
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding:15px 45px;
+}
+#footer ul li{
+    color:#9e9e9e;
+    float:left;
+    transition: color 500ms;
+}
+div .fontColor{
+    color:#9e9e9e;
+}
+#footer a{
+    padding: 3px 8px 3px;
+    color:#9e9e9e;
+    font-size: 12px;
+}
+
+
+
+.hidden{
+  display: none;
+}
+.alertBox{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index:2000;
+  background-color: rgba(0,0,0,0.6);
+}
+.alertBox_box{
+  margin:10% auto;
+  width:480px;
+  background-color: #fff;
+  border-top: 2px solid #FCAE04;
+  border-radius: 5px;
+}
+.alertBox_box .header{
+  color: #000;
+  font-size: 16px;
+  height:43px;
+  padding:0 15px;
+  line-height: 41px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.alertBox_box .closeBtn{
+  float:right;
+  color: #000;
+  cursor: pointer;
+}
+.alertBox_box .alertBox_body{
+  width:80%;
+  margin:30px auto 0;
+  padding-bottom: 20px;
+}
+.alertBox_box .alertBox_body .line_text{
+  width:100%;
+  height:34px;
+  border:1px solid #e1e1e1;
+  padding-left: 8px;
+  color:#4a4a4a;
+  border-radius: 3px;
+  outline:none;
+  margin-bottom: 15px;
+}
+.alertBox_box .alertBox_body .submitBtn{
+  width:100%;
+  height:32px;
+  line-height: 32px;
+  background-color:#fcae04;
+  color:#fff;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  display: block;
+  text-align: center;
+  border:0;
+}
+.alertBox_box .alertBox_body .jumpChange{
+  text-align: right;
+}
+.alertBox_box .alertBox_body .jumpChange a{
+  font-size: 10px;
+  color:rgb(97, 97, 97);
+}
+
+.errInfo{
+  color:red;
+  font-weight: bolder;
+}
+#adver{
+  z-index: 1000;
+  width: 73px;
+  padding:5px;
+  height: 88px;
+  background-color: #fff;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
+  border-radius: 3px 0 0 3px;
+  text-align: center;
+  cursor: pointer;
+  position: fixed;
+  top:50%;
+  right:0;
+  transform: translate(0,-50%);
+}
+#adver p{
+  color:#4a4a4a;
+  transform: scale(0.6);
+  white-space: nowrap;
+}

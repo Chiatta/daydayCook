@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 Ajax Uploader</title>
+  <script src="js/jquery-1.11.3.js"></script>  
+  <script src="js/jquery.ajaxfileupload.js"></script>  
+</head>
+<body>
+   <form action="" method="post" enctype="multipart/form-data">
+    <label for="file">Filename:</label>
+    <input type="file" name="file" id="file" /> 
+    <input type="file" name="file" id="fileVideo" /> 
+    <!-- <br /> -->
+    <!-- <input type="submit" name="submit" value="Submit" id="subFile"/> -->
+   </form>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#file').ajaxfileupload({
+      action: 'data/ajaxFileUpload.php',
+      params: {
+        extra: 'info'
+      },
+      onComplete: function(response) {
+        console.log('custom handler for file:');
+        console.log(JSON.stringify(response));
+      },
+      onStart: function() {
+        // if() return false; // cancels upload
+        console.log("onStart");
+      },
+      onCancel: function() {
+        console.log('no file selected');
+      }
+    });
+    $('#fileVideo').ajaxfileupload({
+      action: 'data/test.php',
+      params: {
+        extra: 'info'
+      },
+      onComplete: function(response) {
+        console.log('custom handler for file:');
+        console.log(JSON.stringify(response));
+      },
+      onStart: function() {
+        // if() return false; // cancels upload
+        console.log("onStart");
+      },
+      onCancel: function() {
+        console.log('no file selected');
+      }
+    });
+  });
+</script>
+</html>

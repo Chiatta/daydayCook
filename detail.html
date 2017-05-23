@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+<div class="alertBox hidden">
+    <div class="alertBox_box">
+      <div class="login">
+        <div class="header">登录 <div class="closeBtn">X</div></div>
+        <div class="alertBox_body">
+          <input type="text" class="line_text" id="nameLogin" placeholder="请输入用户名">
+          <input type="password" class="line_text" id="pwdLogin" placeholder="请输入密码">
+          <p class="errInfo"></p>
+          <button class="submitBtn" id="loginSubmit">登录</button>
+          <p class="jumpChange" id="jumpToReg"><a href="#">还没有账号？立即注册</a></p>
+        </div>
+      </div>
+      <div class="register hidden">
+        <div class="header">注册 <div class="closeBtn">X</div></div>
+        <div class="alertBox_body">
+          <input type="text" class="line_text" id="nameReg" placeholder="请输入用户名">
+          <input type="text" class="line_text" id="pwdReg" placeholder="请输入密码">
+          <p class="errInfo"></p>
+          <button class="submitBtn" id="regSubmit">注册</button>
+          <p class="jumpChange" id="jumpToLogin"><a href="#">已有账号？立即登陆</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="adver">
+    <img src="img/erweima.png" width="63px">
+    <p>下载日日煮APP</p>
+  </div>
+
+
+<!-- nav  bar -->
+
+<div class="nav_div">
+    <div class="nav_logo">
+        <a href="index.html">
+            <img src="img/logo_3.png" alt="logo" width="80px"/>
+        </a>
+    </div>
+
+    <div class="searchBox">
+        <label>
+            <input type="text" placeHolder="食谱"/>
+            <button><i class="icon-search"></i></button>
+        </label>
+    </div>
+
+    <div id="login">
+      <p class="lf" id="loginDDLHover"></p>
+      <a id='loginBtn'><i class="demo-icon icon-user lf">&#xe800;</i></a>
+
+    </div>
+</div>
+
+
+<!-- detail -->
+<div id="detail">                 
+    <!-- detail  videoInfo -->
+    <div id="detail_videoInfo">
+        <div class="detail_video_padding center clear">
+            <div id="detail_video">
+            </div>
+            <div id="detail_video_suggestion">
+                <div class="tip">
+                    <p style="margin-right:10px;">当红人气菜</p>
+                    <p title="综合排序" id="totalRank" class="rank">综合</p>
+                    <p title="热门排序" id="lookRank" class="rank">热门</p>
+                    <p title="信用排序" id="commentRank" class="rank">信用</p>
+                </div>
+                <div id="suggest-list"></div>
+            </div>
+        </div>
+    </div>
+    <!-- detail foodInfo -->
+    <div class="detail_foodInfo center">
+        <div class="detail_foodInfo_name">
+        </div>
+        <div class="detail_food_material">
+            <div class="title">
+                <i class="demo-icon icon-inbox">&#xe805;</i>
+                <span>食材</span>
+            </div>
+            <div class="table">
+                <table>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="detail_food_steps">
+            <div class="title">
+                <i class="demo-icon icon-shopping-basket">&#xf291;</i>
+                <span>烹饪步骤</span>
+            </div>
+            <div class="stepList">
+            </div>
+        </div>
+   
+        <!-- detail comments -->
+        <div class="detail_foodComment">
+            <div class="title">
+                <i class="demo-icon icon-commenting-o">&#xf27B;</i>
+                <span>评论</span>
+            </div>
+            <div class="talkBox">
+                <textarea placeholder="我来说两句..." cols="30" rows="10"></textarea>
+                <div class="talkSubmit">
+                    <img src="img/noimg.png">
+                    <select id="rankSel" style="outline:0;width:100px;vertical-align:middle;margin-left:20px;">
+                        <option>请选择评分</option>
+                        <option value="5">5分</option>
+                        <option value="4">4分</option>
+                        <option value="3">3分</option>
+                        <option value="2">2分</option>
+                        <option value="1">1分</option>
+                    </select>
+                    <button class="commit rt">发表评论</button>
+                </div>
+            </div>
+            <div class="comments">
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- footer -->
+<div id="footer" class="">
+    <div class="">
+        <ul class="">
+            <li><a href="#">简体</a>|</li>
+            <li><a href="#">繁体</a>|</li>
+            <li><a href="#">En</a>|</li>
+        </ul>
+        <ul class="">
+            <li><a href="http://cn2.daydaycook.com/" target="_blank">香港官网</a></li>
+            <li><a href="./about.html">关于我们</a></li>
+            <li><a href="./contact.html">联系我们</a></li>
+            <li><a href="./privacy.html">隐私条款</a></li>
+            <li><a href="./use.html">使用条款</a></li>
+        </ul>
+    </div>
+    <div class="rt fontColor"> 上海微食信息科技有限公司 版权所有. 
+        <a href="http://www.miitbeian.gov.cn" target="_blank">沪 ICP 备 16029627 号-2</a>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+  <script src="js/jquery.cookie.js" type="text/javascript"></script>  
+<script src="js/detail.js"></script>
+</body>
+</html>

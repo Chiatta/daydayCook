@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body style="
+  height: 100vh;
+  position: relative;
+  background: url('img/mainbg.jpeg')no-repeat;
+  background-size: 100% 100%;
+">
+  <a href="#" id="logo">
+    <img src="img/logo.png" alt="">
+  </a>
+  <div class="alertBox">
+    <div class="alertBox_box">
+      <div class="login">
+        <div class="header">管理员登录</div>
+        <div class="alertBox_body">
+          <input type="text" class="line_text" id="nameLogin" placeholder="请输入用户名">
+          <input type="password" class="line_text" id="pwdLogin" placeholder="请输入密码">
+          <p class="errInfo"></p>
+          <button class="submitBtn" id="loginSubmit">登录</button>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/jquery.cookie.js" type="text/javascript"></script>  
+  <script>
+    $("#loginSubmit").on("click",function (){
+        var name,pwd;
+       name = $("#nameLogin").val();
+       pwd = $("#pwdLogin").val(); 
+        $.post(
+            "data/loginManager.php",
+            {name:name,pwd:pwd},
+            function(data){
+                console.log(data);
+                if(data[0] == "msg"){
+                  $(".alertBox_body .errInfo").html(data[1]);
+                }else{
+                  if(data){
+                      $.cookie("userNameM",name,{path:'/',expires:1});
+                      $.cookie("pwdM",pwd,{path:'/',expires:1});
+                      $.cookie("userIdM",data.userID,{path:'/',expires:1});
+                  }
+                  self.location='managerIndex.html'; 
+                }
+        }); 
+    });
+  </script>
+</body>
+</html>
